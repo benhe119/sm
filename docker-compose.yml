@@ -1,0 +1,31 @@
+version: "3.3"
+
+services:
+  sm:
+    image: prologic/sm
+    command: -datadir /data -dburi bolt:///data/sm.db
+    networks:
+      - prometheus
+      - traefik
+    volumes:
+      - sm:/data
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=8000"
+        - "traefik.backend=sm"
+        - "traefik.docker.network=traefik"
+        - "traefik.frontend.rule=Host:sm.mydomain.com"
+      restart_policy:
+        condition: on-failure
+      replicas: 1
+
+networks:
+  prometheus:
+    external: true
+  traefik:
+    external: true
+
+volumes:
+  sm:
+    driver: local
