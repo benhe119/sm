@@ -19,12 +19,6 @@ func TestMain(m *testing.M) {
 	}
 	defer os.RemoveAll(datadir)
 
-	_, err = InitData(datadir)
-	if err != nil {
-		log.Errorf("error initializing data: %s", err)
-		os.Exit(1)
-	}
-
 	db, err := InitDB("memory://")
 	if err != nil {
 		log.Errorf("error initializing database: %s", err)

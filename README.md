@@ -1,10 +1,10 @@
 # sm - SEV Manager
 
-[![Build Status](https://travis-ci.org/prologic/sm.svg)](https://travis-ci.org/prologic/sm)
+[![Build Status](https://cloud.drone.io/api/badges/prologic/sm/status.svg)](https://cloud.drone.io/prologic/sm)
 [![CodeCov](https://codecov.io/gh/prologic/sm/branch/master/graph/badge.svg)](https://codecov.io/gh/prologic/sm)
 [![Go Report Card](https://goreportcard.com/badge/prologic/sm)](https://goreportcard.com/report/prologic/sm)
 [![GoDoc](https://godoc.org/github.com/prologic/sm?status.svg)](https://godoc.org/github.com/prologic/sm) 
-[![](https://images.microbadger.com/badges/image/prologic/sm.svg)](https://microbadger.com/images/prologic/sm "Get your own image badge on microbadger.com")
+[![Sourcegraph](https://sourcegraph.com/github.com/prologic/sm/-/badge.svg)](https://sourcegraph.com/github.com/prologic/sm?badge)
 
 A simple SEV Manager (*Site Event Management*) that lets you create and
 communicate real-time information for critical infrastructure events brining
